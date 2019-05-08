@@ -2,6 +2,11 @@
   <div class="col-xs-10">
     <lc-shopping-edit></lc-shopping-edit>
     <hr>
-    <p>Shopping List</p>
+    <ul class="list-group">
+      <a
+        style="cursor: pointer"
+        class="list-group-item"
+        *ngFor="let i of ingredients">{{ i.name }} * {{ i.amount }}</a>
+    </ul>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'lc-header',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Output() compToggled = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onToggle(compName: string) {
+    this.compToggled.emit(compName);
+  }
 }

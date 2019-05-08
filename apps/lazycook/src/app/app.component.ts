@@ -7,4 +7,9 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "lazycook";
+  compToDisplay = '';
+
+  onCompToggled(compName: string) {
+    this.compToDisplay = compName;
+  }
 }

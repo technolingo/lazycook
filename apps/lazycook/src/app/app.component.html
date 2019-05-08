@@ -1,9 +1,9 @@
-<lc-header></lc-header>
+<lc-header (compToggled)="onCompToggled($event)"></lc-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <lc-recipes></lc-recipes>
-            <lc-shopping-list></lc-shopping-list>
+            <lc-recipes *ngIf="['recipes', ''].includes(compToDisplay)"></lc-recipes>
+            <lc-shopping-list *ngIf="compToDisplay === 'shopping'"></lc-shopping-list>
         </div>
     </div>
 </div>
